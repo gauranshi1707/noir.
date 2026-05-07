@@ -1,0 +1,82 @@
+/* Minimal, subtle animations for noir */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow-soft {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 600ms ease-out forwards;
+  }
+
+  .animate-fade-in-down {
+    animation: fade-in-down 700ms ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 700ms ease-out forwards;
+  }
+
+  .animate-glow-soft {
+    animation: glow-soft 3s ease-in-out infinite;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 500ms ease-out forwards;
+  }
+
+  .font-serif {
+    font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
